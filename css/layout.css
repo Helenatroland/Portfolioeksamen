@@ -1,0 +1,36 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* footer */
+.footer {
+  display: flex; /* Brug Flexbox for at opdele i kolonner */
+  flex-direction: column; /* Kolonnerne stables vertikalt på mobile enheder */
+  padding: 50px;
+  text-align: center;
+  background-color: rgb(235, 232, 216);
+  width: 100%; /* Sikrer, at footeren strækker sig over hele bredden */
+  margin-top: 50px;
+}
+
+.kontakt,
+.sociale-medier {
+  margin-bottom: 30px; /* Afstand mellem de to sektioner */
+}
+
+.kontakt h3,
+.sociale-medier h3 {
+  margin-bottom: 10px; /* Lidt afstand under overskrifterne */
+}
+
+.gridikoner img {
+  height: 30px; /* Sætter højden til 30px */
+  width: auto; /* Bevarer proportionerne ved at justere bredden automatisk */
+}

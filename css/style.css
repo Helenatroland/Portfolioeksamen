@@ -1,18 +1,26 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Fonte */
 
-/* H1 font */
-.anton-regular {
-  font-family: "Anton", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-/* H2 + flere H font */
-.caveat-normal {
-  font-family: "Caveat", serif;
+/* H1 + H3 font */
+.teko-normal {
+  font-family: "Teko", serif;
   font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+/* H2 font */
+.oooh-baby-regular {
+  font-family: "Oooh Baby", serif;
   font-weight: 400;
   font-style: normal;
 }
+
 /* P font */
 .dm-sans-normal {
   font-family: "DM Sans", serif;
@@ -21,9 +29,163 @@
   font-style: normal;
 }
 
-/*************** Reset *********************/
-* {
+/* styling af body på alle sider */
+body {
+  background-color: rgb(246, 246, 238);
+}
+
+h1 {
+  font-family: "Teko", serif;
+}
+
+h2 {
+  font-family: "Oooh Baby", serif;
+}
+
+h3 {
+  font-family: "Teko", serif;
+}
+
+p {
+  font-family: "DM Sans", serif;
+}
+
+/* alle links */
+ul,
+ol {
+  list-style: none;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+/* logo */
+.logo {
+  position: absolute;
+  width: 200px;
+  aspect-ratio: 450/120;
+  margin-top: -10px;
+}
+
+/* Menu */
+header {
+  position: relative;
+  top: 0;
+  align-items: center;
+  padding: 30px;
+  background-color: rgb(235, 232, 216);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  flex-direction: row-reverse;
+}
+
+.menu {
+  display: none; /* Skjuler menuen som standard */
+  flex-direction: column; /* Laver den vertikal */
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  background-color: rgb(235, 232, 216);
+  border-radius: 5px;
+  padding: 10px;
+  gap: 20px;
+  z-index: 10;
+  list-style: none;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+.button-link {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+  font-family: "Oooh Baby", serif;
+  transition: transform 0.2s; /* Animation */
+}
+
+/* hover effekt på menu */
+.button-link:hover {
+  transform: scale(1.3);
+}
+
+/* burgermenu */
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25px;
+  width: 30px;
+  cursor: pointer;
+  background-color: rgb(235, 232, 216);
+}
+
+.burger .line {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+/* Når menuen er åben */
+.menu.active {
+  display: flex;
+}
+
+/* Forside */
+.index_tekst {
+  color: rgb(98, 96, 96);
+  text-align: center;
+  font-size: 16px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.index_billede {
+  aspect-ratio: 980/640;
+  margin: 30px;
+  margin-bottom: 70px;
+}
+
+.link_til_om_mig {
+  font-size: 18px;
+  margin: 30px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.om_mig_link {
+  color: black;
+  font-size: 20px;
+  margin-top: 50px;
+  background-color: rgb(235, 232, 216);
+  padding: 3px 3px; /* Tilføjer afstand inden i baggrunden */
+  border-radius: 70px; /* Gør hjørnerne runde, hvis ønsket */
+  margin: 70px;
+  text-decoration: none;
+}
+
+/* Til computersite */
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none; /* Skjuler burgermenu i computersite version */
+  }
+
+  .menu {
+    display: flex; /* Gør menuen synlig hele tiden */
+    flex-direction: row;
+    position: static;
+    background: none;
+    gap: 50px;
+    padding: 0;
+  }
 }
