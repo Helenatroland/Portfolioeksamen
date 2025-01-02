@@ -9,6 +9,28 @@ img {
   max-width: 100%;
 }
 
+/* Om mig side - CV */
+/* CV container */
+.cv {
+  padding: 20px;
+}
+/* CV indhold */
+.cv_content {
+  display: flex; /* Brug Flexbox for at opdele i kolonner */
+  justify-content: space-between; /* Sørg for at kolonnerne er adskilt */
+  gap: 20px; /* Giv lidt afstand mellem kolonnerne */
+}
+
+/* Venstre kolonne */
+.venstre_cv {
+  flex: 1; /* Kolonnen fylder lige så meget som den anden */
+}
+
+/* Højre kolonne */
+.hoejre_cv {
+  flex: 1; /* Kolonnen fylder lige så meget som den anden */
+}
+
 /* footer */
 .footer {
   display: flex; /* Brug Flexbox for at opdele i kolonner */
@@ -18,11 +40,12 @@ img {
   background-color: rgb(235, 232, 216);
   width: 100%; /* Sikrer, at footeren strækker sig over hele bredden */
   margin-top: 50px;
+  line-height: 1.8;
 }
 
 .kontakt,
 .sociale-medier {
-  margin-bottom: 30px; /* Afstand mellem de to sektioner */
+  margin-bottom: 20px; /* Afstand mellem de to sektioner */
 }
 
 .kontakt h3,
@@ -33,4 +56,5 @@ img {
 .gridikoner img {
   height: 30px; /* Sætter højden til 30px */
   width: auto; /* Bevarer proportionerne ved at justere bredden automatisk */
+  margin-top: 10px;
 }
