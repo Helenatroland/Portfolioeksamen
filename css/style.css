@@ -79,6 +79,14 @@
   margin-bottom: 12px;
 }
 
+.blomster {
+  aspect-ratio: 390/360;
+  width: 30%;
+  display: block; /* Gør billedet til et blokniveau-element */
+  margin: 0 auto; /* Centrerer billedet horisontalt */
+  max-width: 100%; /* Sikrer, at billedet ikke bliver større end containeren */
+}
+
 /* Om mig side - CV */
 /* CV container */
 .cv {
@@ -215,9 +223,36 @@
     margin-left: 60px;
   }
 
-  /* rettelser til tekst 2 */
+  /* rettelser til tekst 2 i computersite */
   .om_mig_tekst_2 {
     line-height: 2.2;
     margin-left: 80px;
+  }
+
+  /* rettelser til cv overskrift i computersite */
+  .cv_h2 {
+    font-size: 25px;
+    display: block; /* Gør det til et blokniveau-element */
+    padding: 5px 30px;
+    margin: 20px auto; /* Centrerer elementet vandret */
+    text-align: center; /* Centrerer teksten inden i elementet */
+    width: fit-content; /* Begræns bredden til indholdet, så baggrunden ikke er kæmpe stor */
+  }
+
+  .cv_content {
+    display: flex; /* Gør det muligt at bruge flexbox */
+    justify-content: center; /* Centrerer kolonnerne */
+    align-items: flex-start; /* Justerer indholdet i kolonnerne til toppen */
+    font-size: 16px; /* gør skriften lidt større */
+    margin-top: 80px; /* mere afstand mellem overskriften og teksten */
+    gap: 50px; /* Afstand mellem kolonnerne */
+    margin-left: 250px; /* rykker teksten ind på midten mens det stadig står læseligt fra venstre side */
+  }
+  .hoejre_cv {
+    line-height: 3; /* øger afstanden mellem tekst, så det fylder mere og passer med venstre_cv i højden af linjerne */
+  }
+
+  .blomster {
+    width: 15%;
   }
 }

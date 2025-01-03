@@ -35,7 +35,7 @@ img {
 
 /* styling af body på alle sider */
 body {
-  background-color: rgb(246, 246, 238);
+  background-color: rgb(244, 244, 232);
 }
 
 h1 {
@@ -194,6 +194,7 @@ nav {
     display: none;
   }
 
+  /* normal menu i computerversion */
   .menu {
     display: flex; /* Gør menuen synlig hele tiden */
     flex-direction: row;
@@ -201,5 +202,18 @@ nav {
     background: none;
     gap: 50px;
     padding: 0;
+  }
+
+  /* ændring i footer, så der kommer to kolonner i computerversion */
+  .footer {
+    flex-direction: row; /* Kolonnerne vises side om side på desktop */
+    justify-content: center; /* Centrerer de to sektioner */
+    text-align: left; /* Justerer tekst til venstre på desktop */
+  }
+
+  .kontakt,
+  .sociale-medier {
+    margin-bottom: 0; /* Fjern margin mellem kolonnerne på desktop */
+    width: 50%; /* Giver begge sektioner plads til at være side om side */
   }
 }
