@@ -40,7 +40,7 @@
   text-decoration: none;
   text-align: center;
 }
-
+/* hover effekt på 'om mig' linket, så det forstørres, når musen kører over */
 .om_mig_link h3:hover {
   transform: scale(1.3);
 }
@@ -135,6 +135,45 @@
 .Kompetencer,
 .Erhvervserfaring {
   margin-bottom: 20px; /* Afstand mellem sektioner */
+}
+
+/* justering på portfolio-siden */
+
+/* justering af h1 på portfolio-siden */
+.portfolio_h1 {
+  color: rgb(98, 96, 96);
+  font-size: 30px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* justering af h2 på portfolio-siden */
+.portfolio_h2 {
+  text-align: center;
+  line-height: 1.8;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.portfolio_h3 h3 {
+  text-decoration: none; /* Sørger for, at der ikke er nogen understrikning */
+  color: rgb(98, 96, 96);
+  font-size: 22px;
+  text-align: center;
+  margin: 30px;
+  background-color: rgb(235, 232, 216);
+  border-radius: 70px; /* runder hjørnerne */
+}
+
+/* fjerner stregen under linksene */
+.portfolio_h3 a {
+  text-decoration: none; /* Fjerner også stregen på eventuelle links */
+}
+
+/* hover effekt på de forskellige portfolio links til mine gamle sites, så linksene forstørres, når musen kører over */
+.portfolio_h3 h3:hover {
+  transform: scale(1.2);
 }
 
 /* Til computersite */
