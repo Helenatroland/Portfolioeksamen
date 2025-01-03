@@ -5,145 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Fonte */
-
-/* H1 + H3 font */
-.teko-normal {
-  font-family: "Teko", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-/* H2 font */
-.oooh-baby-regular {
-  font-family: "Oooh Baby", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* P font */
-.dm-sans-normal {
-  font-family: "DM Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* styling af body på alle sider */
-body {
-  background-color: rgb(246, 246, 238);
-}
-
-h1 {
-  font-family: "Teko", serif;
-}
-
-h2 {
-  font-family: "Oooh Baby", serif;
-}
-
-h3 {
-  font-family: "Teko", serif;
-}
-
-p {
-  font-family: "DM Sans", serif;
-}
-
-/* alle links */
-ul,
-ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* logo */
-.logo {
-  position: absolute;
-  width: 200px;
-  aspect-ratio: 450/120;
-  margin-top: -10px;
-}
-
-/* Menu */
-header {
-  position: relative;
-  top: 0;
-  align-items: center;
-  padding: 22px;
-  background-color: rgb(235, 232, 216);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  margin: 20px;
-  flex-direction: row-reverse;
-}
-
-.menu {
-  display: none; /* Skjuler menuen som standard */
-  flex-direction: column; /* Laver den vertikal */
-  position: absolute;
-  top: 100px;
-  right: 20px;
-  background-color: rgb(235, 232, 216);
-  border-radius: 5px;
-  padding: 10px;
-  gap: 20px;
-  z-index: 10;
-  list-style: none;
-}
-
-.menu li {
-  margin-right: 20px;
-}
-.button-link {
-  display: inline-block;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  font-size: 30px;
-  cursor: pointer;
-  font-family: "Oooh Baby", serif;
-  transition: transform 0.2s; /* Animation */
-}
-
-/* hover effekt på menu */
-.button-link:hover {
-  transform: scale(1.3);
-}
-
-/* burgermenu */
-.burger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 25px;
-  width: 30px;
-  cursor: pointer;
-  background-color: rgb(235, 232, 216);
-}
-
-.burger .line {
-  height: 3px;
-  width: 100%;
-  background-color: black;
-  border-radius: 5px;
-  transition: all 0.3s;
-}
-
-/* hover effekt på burgermenu (de tre linjer) - forstørres, når musen bliver kørt over */
-.burger:hover {
-  transform: scale(1.3);
-}
-
-/* Når menuen er åben */
-.menu.active {
-  display: flex;
-}
-
 /* Forside */
 .index_tekst {
   color: rgb(98, 96, 96);
@@ -218,6 +79,18 @@ nav {
   margin-bottom: 12px;
 }
 
+/* Om mig side - CV */
+/* CV container */
+.cv {
+  padding: 20px;
+}
+/* CV indhold */
+.cv_content {
+  display: flex; /* Brug Flexbox for at opdele i kolonner */
+  justify-content: space-between; /* Sørg for at kolonnerne er adskilt */
+  gap: 20px; /* Giv lidt afstand mellem kolonnerne */
+}
+
 .cv_h2 {
   text-align: center;
   margin-top: 10px;
@@ -226,6 +99,16 @@ nav {
   background-color: rgb(235, 232, 216);
   padding: 3px 3px; /* Tilføjer afstand i baggrunden */
   border-radius: 70px; /* runder hjørnerne */
+}
+
+/* Venstre kolonne */
+.venstre_cv {
+  flex: 1; /* Kolonnen fylder lige så meget som den anden */
+}
+
+/* Højre kolonne */
+.hoejre_cv {
+  flex: 1; /* Kolonnen fylder lige så meget som den anden */
 }
 
 .cv {
@@ -246,49 +129,8 @@ nav {
   margin-bottom: 20px; /* Afstand mellem sektioner */
 }
 
-/* footer styling */
-.kontakt,
-.sociale-medier {
-  margin-bottom: 20px; /* Afstand mellem de to sektioner */
-}
-
-.kontakt h3,
-.sociale-medier h3 {
-  margin-bottom: 10px; /* Lidt afstand under overskrifterne */
-}
-
-.gridikoner img {
-  height: 30px; /* Sætter højden til 30px */
-  width: auto; /* Bevarer proportionerne ved at justere bredden automatisk */
-  margin-top: 10px;
-}
-
-/* hover effekt på logoerne - forstørres, når musen bliver kørt over */
-.gridikoner img:hover {
-  transform: scale(1.3);
-}
-
 /* Til computersite */
 @media screen and (min-width: 768px) {
-  /* logo forstørres i computersite */
-  .logo {
-    width: 300px;
-    margin-top: -25px;
-  }
-  /* burgermenu fjernes i computersite */
-  .burger {
-    display: none;
-  }
-
-  .menu {
-    display: flex; /* Gør menuen synlig hele tiden */
-    flex-direction: row;
-    position: static;
-    background: none;
-    gap: 50px;
-    padding: 0;
-  }
-
   /* forstørrer og centrerer teksten i computersite - tekst del 1, forside */
   .index_tekst {
     width: 50%;
@@ -330,9 +172,52 @@ nav {
     margin-top: 120px;
   }
 
+  /* Rettelser på om 'mig side' til forstørrelse af billede og lave to kolonner */
+  .praesentation {
+    display: flex; /* Gør containeren fleksibel */
+    justify-content: space-between; /* Fordeler pladsen mellem venstre og højre sektion */
+    padding: 50px; /* Indre margin */
+  }
+
+  /* billede af mig - sat i den ene kolonne */
   .portraet {
-    display: block; /* Gør billedet til et blokniveau-element */
-    margin: 0 auto; /* Centrerer billedet vandret */
-    max-width: 100%; /* Sørg for, at billedet ikke bliver for stort */
+    display: flex;
+    flex-direction: column; /* Stabler billedet og navnet vertikalt */
+    align-items: center; /* Centrerer både billedet og navnet */
+    flex: 1; /* Tildeler plads til venstre sektion */
+  }
+
+  /* rettelser til om mig side til computersite */
+  .portraet img {
+    margin-top: 30px;
+    width: 700px; /* Gør billedet større */
+    height: auto; /* Bevarer billedets proportioner */
+  }
+
+  /* tekst med navn under billedet */
+  .navn_h1 {
+    margin-top: 60px; /* Skaber luft mellem billedet og navnet */
+    text-align: center; /* Centrerer navnet */
+    padding: 20px 30px;
+  }
+
+  /* samlede rettelser til de to tekster */
+  .om_mig_tekst_1,
+  .om_mig_tekst_2 {
+    flex: 1; /* Giver lidt plads til teksten */
+    max-width: 550px; /* Begrænser bredden af teksten */
+    margin-bottom: 20px; /* Skaber afstand mellem de to tekstbokse */
+  }
+  /* rettelser til tekst 1 */
+  .om_mig_tekst_1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 60px;
+  }
+
+  /* rettelser til tekst 2 */
+  .om_mig_tekst_2 {
+    line-height: 2.2;
+    margin-left: 80px;
   }
 }
