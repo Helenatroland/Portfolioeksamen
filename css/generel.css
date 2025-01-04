@@ -7,7 +7,7 @@
 
 /* Fonte */
 
-/* H1 + H3 font */
+/* H1 + H3 + H4 font */
 .teko-normal {
   font-family: "Teko", serif;
   font-optical-sizing: auto;
@@ -47,6 +47,10 @@ h2 {
 }
 
 h3 {
+  font-family: "Teko", serif;
+}
+
+h4 {
   font-family: "Teko", serif;
 }
 
