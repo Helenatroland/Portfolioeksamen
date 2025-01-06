@@ -58,6 +58,14 @@ p {
   font-family: "DM Sans", serif;
 }
 
+/* laver en horisontal linje på siderne */
+.horisontal_linje {
+  border-bottom: 1px solid;
+  margin-top: 5px;
+  width: 100%;
+  justify-items: center;
+}
+
 /* alle links */
 ul,
 ol {
@@ -230,5 +238,14 @@ nav {
   .sociale-medier {
     margin-bottom: 0; /* Fjern margin mellem kolonnerne på desktop */
     width: 50%; /* Giver begge sektioner plads til at være side om side */
+  }
+
+  .gridikoner img {
+    height: 45px; /* forstørrer ikonerne */
+    margin-top: 20px;
+  }
+
+  .github_image img {
+    height: 100px; /* forstørrer ikonet */
   }
 }

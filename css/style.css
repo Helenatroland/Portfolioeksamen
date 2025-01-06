@@ -72,7 +72,7 @@
   line-height: 1.8;
   margin: 30px;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 /* afstand mellem sektionerne i teksten */
 .om_mig_tekst_2 p {
@@ -93,7 +93,7 @@
 
 .cv_h2 {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 60px;
   font-size: 22px;
   background-color: rgb(235, 232, 216);
@@ -126,7 +126,7 @@
 .Sprog,
 .Kompetencer,
 .Erhvervserfaring {
-  margin-bottom: 20px; /* Afstand mellem sektioner */
+  margin-bottom: 10px; /* Afstand mellem sektioner */
 }
 
 .galleri_tekst {
@@ -134,6 +134,7 @@
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 40px;
+  margin-top: 40px;
   background-color: rgb(235, 232, 216);
   padding: 3px 20px; /* Tilføjer afstand i baggrunden */
   border-radius: 70px; /* runder hjørnerne */
@@ -175,17 +176,16 @@
 }
 
 /* justering af illustration på portfolio-side */
-.portfolio_billede {
+.portfolio_illustration {
   aspect-ratio: 800/410;
   margin-top: 40px;
-  margin-bottom: -30px; /* mindsker afstanden mellem billede og følgende overskrift */
 }
 
 /* justering af overskrifter til mine gamle sites på portfolio-side */
 .portfolio h4 {
   font-size: 25px;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 50px;
   text-decoration: underline;
   margin-left: 20px;
   margin-right: 20px;
@@ -197,7 +197,7 @@
   font-size: 22px;
   text-align: center;
   margin-top: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   margin-left: 70px;
   margin-right: 70px;
   background-color: rgb(235, 232, 216);
@@ -340,6 +340,7 @@
     margin-top: 80px; /* mere afstand mellem overskriften og teksten */
     gap: 50px; /* Afstand mellem kolonnerne */
     margin-left: 250px; /* rykker teksten ind på midten mens det stadig står læseligt fra venstre side */
+    margin-bottom: 30px;
   }
 
   /* rettelser til højre cv kolonne indhold i computersite */
@@ -350,15 +351,105 @@
   /* rettelser til galleri tekst i computersite */
   .galleri_tekst {
     font-size: 22px;
-    margin-left: 350px;
-    margin-right: 350px;
-    margin-top: 50px;
+    margin-left: 350px; /* centrerer teksten */
+    margin-right: 350px; /* centrerer teksten */
+    margin-top: 70px;
     margin-bottom: 80px;
+    line-height: 1.5; /* justerer højden på afstanden mellem linjernes højde */
   }
 
   /* rettelser til galleri billeder i computersite */
   .galleri {
     grid-template-columns: repeat(4, 1fr); /* Fire kolonner på større skærme */
     margin: 30px;
+  }
+
+  .portfolio h1 {
+    font-size: 100px;
+  }
+
+  .portfolio h2 {
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 30px;
+    line-height: 2.2;
+  }
+
+  .portfolio_illustration img {
+    width: 750px; /* Sætter billedets bredde til 800px */
+    padding-top: 30px; /* Tilføjer lidt afstand til toppen af billedet */
+    display: block; /* Sørger for, at margin fungerer korrekt */
+    margin: 0 auto; /* Centrerer billedet horisontalt */
+  }
+
+  .tema_01 {
+    margin-top: -290px;
+  }
+  /* Styling af hver tema-sektion med Flexbox for layout */
+  .tema_01,
+  .tema_02,
+  .tema_03,
+  .tema_04,
+  .tema_05_1,
+  .tema_05_2 {
+    display: flex; /* Anvender Flexbox for at oprette et to-kolonne layout */
+    justify-content: space-between; /* Fordeler plads mellem de to kolonner */
+    margin-bottom: 40px; /* Tilføjer plads nedenunder hver sektion */
+    padding: 20px; /* Tilføjer padding inden for hver sektion */
+  }
+
+  /* Styling af teksten i venstre kolonne */
+  .tema_01 .tekst,
+  .tema_02 .tekst,
+  .tema_03 .tekst,
+  .tema_04 .tekst,
+  .tema_05_1 .tekst,
+  .tema_05_2 .tekst {
+    flex: 1; /* Gør at tekstkolonnen optager lige meget plads som billedekolonnen */
+    margin-right: 20px; /* Tilføjer margin til højre for at adskille tekst og billede */
+  }
+
+  /* justering af overskrifter til mine gamle sites på portfolio-side */
+  .portfolio h4 {
+    font-size: 40px;
+    margin-top: 40px;
+  }
+
+  .portfolio h3 {
+    font-size: 30px;
+  }
+
+  /* justering af p tekst på portfolio-side */
+  .portfolio p {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    line-height: 2;
+  }
+
+  /* Styling af billedet i højre kolonne */
+  .tema_01 .billede,
+  .tema_02 .billede,
+  .tema_03 .billede,
+  .tema_04 .billede,
+  .tema_05_1 .billede,
+  .tema_05_2 .billede {
+    flex: 1; /* Gør at billedekolonnen optager lige meget plads som tekstkolonnen */
+    text-align: right; /* Justerer billederne til højre i deres kolonne */
+  }
+
+  /* Gør billederne responsive - har gjort dette opdelt, da jeg ikke synes at det fungerede som 'portfolio img', da det så ændrede på mit illustrationsbillede */
+  .tema_01 .billede img,
+  .tema_02 .billede img,
+  .tema_03 .billede img,
+  .tema_04 .billede img,
+  .tema_05_1 .billede img,
+  .tema_05_2 .billede img {
+    width: 90%; /* Gør billederne til 100% af deres containerbredde */
+    height: auto; /* Bevarer billedernes oprindelige aspect ratio */
+    margin-top: 70px;
+    margin-right: 30px;
+    margin-bottom: 40px;
   }
 }
