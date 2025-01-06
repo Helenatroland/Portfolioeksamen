@@ -175,6 +175,17 @@ nav {
   margin-bottom: 10px; /* Lidt afstand under overskrifterne */
 }
 
+/* Ændring af github logo */
+.github_image img {
+  height: 80px; /* Sætter højden til 80px */
+  width: auto; /* Bevarer proportionerne ved at justere bredden automatisk */
+}
+/* hover effekt på github logo - forstørres, når musen bliver kørt over */
+.github_image img:hover {
+  transform: scale(1.3);
+}
+
+/* Ændring af logoerne */
 .gridikoner img {
   height: 30px; /* Sætter højden til 30px */
   width: auto; /* Bevarer proportionerne ved at justere bredden automatisk */
