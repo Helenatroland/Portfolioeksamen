@@ -199,4 +199,283 @@
   text-align: center;
   margin-top: 50px;
   text-decoration: underline;
-  margin-left: 20px
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.portfolio h3 {
+  text-decoration: none; /* Sørger for, at der ikke er nogen understrikning */
+  color: black;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  margin-left: 70px;
+  margin-right: 70px;
+  background-color: rgb(162, 154, 139);
+  border-radius: 70px; /* runder hjørnerne */
+}
+
+/* hover effekt på de forskellige portfolio links til mine gamle sites, så linksene forstørres, når musen kører over */
+.portfolio h3:hover {
+  transform: scale(1.2);
+}
+
+/* fjerner stregen under linksene */
+.portfolio a {
+  text-decoration: none; /* Fjerner også stregen på eventuelle links */
+}
+
+/* justering af p tekst på portfolio-side */
+.portfolio p {
+  line-height: 1.8;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* justering af link til Trelloboard  */
+.trelloboard a {
+  color: black;
+  font-family: "Oooh Baby", serif;
+  font-size: 25px;
+}
+
+/* justering af alle billeder på portfolio-siden */
+.portfolio img {
+  width: 90%;
+  margin-left: 25px; /* centrerer billederne */
+}
+
+/* Til computersite */
+@media screen and (min-width: 768px) {
+  /* forstørrer og centrerer teksten i computersite - tekst del 1, forside */
+  .index_tekst {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto; /* Centrer teksten */
+    padding-top: 80px;
+    font-size: 22px;
+  }
+
+  /* forstørrer billede og centerer det i computersite, forside */
+  .index_billede {
+    width: 800px;
+    margin: 0 auto; /* Centrerer billedet vandret */
+    display: block; /* Gør det muligt at centrere blok-elementer som billeder */
+  }
+
+  /* forstørrer og centrerer teksten i computersite - tekst del 2, forside */
+  .link_til_om_mig_tekst {
+    width: 70%; /* Juster bredden */
+    margin: 0 auto; /* Vandret centrering */
+    text-align: center; /* Centrer teksten inden i elementet */
+    padding-top: 70px;
+    padding-bottom: 30px;
+    font-size: 20px;
+  }
+
+  /* gør teksten større og gør baggrunden omkring mindre + centrerer elementet på siden */
+  .om_mig_link {
+    font-size: 28px;
+    display: block; /* Gør det til et blokniveau-element */
+    padding: 5px 30px;
+    margin: 20px auto; /* Centrerer elementet vandret */
+    text-align: center; /* Centrerer teksten inden i elementet */
+    width: fit-content; /* Begræns bredden til indholdet, så baggrunden ikke er kæmpe stor */
+  }
+
+  /* ændrer afstanden fra link til footer i computersite - KUN på forsiden! */
+  .footer_kun_index {
+    margin-top: 120px;
+  }
+
+  /* Rettelser på om 'mig side' til forstørrelse af billede og lave to kolonner */
+  .praesentation {
+    display: flex; /* Gør containeren fleksibel */
+    justify-content: space-between; /* Fordeler pladsen mellem venstre og højre sektion */
+    padding: 50px; /* Indre margin */
+  }
+
+  /* billede af mig - sat i den ene kolonne */
+  .portraet {
+    display: flex;
+    flex-direction: column; /* Stabler billedet og navnet vertikalt */
+    align-items: center; /* Centrerer både billedet og navnet */
+    flex: 1; /* Tildeler plads til venstre sektion */
+  }
+
+  /* rettelser til om mig side til computersite */
+  .portraet img {
+    margin-top: 30px;
+    width: 700px; /* Gør billedet større */
+    height: auto; /* Bevarer billedets proportioner */
+  }
+
+  /* tekst med navn under billedet */
+  .navn_h1 {
+    margin-top: 60px; /* Skaber luft mellem billedet og navnet */
+    text-align: center; /* Centrerer navnet */
+    padding: 20px 30px;
+  }
+
+  /* samlede rettelser til de to tekster */
+  .om_mig_tekst_1,
+  .om_mig_tekst_2 {
+    flex: 1; /* Giver lidt plads til teksten */
+    max-width: 550px; /* Begrænser bredden af teksten */
+    margin-bottom: 20px; /* Skaber afstand mellem de to tekstbokse */
+  }
+  /* rettelser til tekst 1 */
+  .om_mig_tekst_1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+
+  /* rettelser til tekst 2 i computersite */
+  .om_mig_tekst_2 {
+    line-height: 2.2;
+    margin-left: 80px;
+  }
+
+  /* rettelser til cv overskrift i computersite */
+  .cv_h2 {
+    font-size: 25px;
+    display: block; /* Gør det til et blokniveau-element */
+    padding: 5px 30px;
+    margin: 20px auto; /* Centrerer elementet vandret */
+    text-align: center; /* Centrerer teksten inden i elementet */
+    width: fit-content; /* Begræns bredden til indholdet, så baggrunden ikke er kæmpe stor */
+  }
+
+  /* rettelser til cv indhold i computersite */
+  .cv_content {
+    display: flex; /* Gør det muligt at bruge flexbox */
+    justify-content: center; /* Centrerer kolonnerne */
+    align-items: flex-start; /* Justerer indholdet i kolonnerne til toppen */
+    font-size: 16px; /* gør skriften lidt større */
+    margin-top: 80px; /* mere afstand mellem overskriften og teksten */
+    gap: 50px; /* Afstand mellem kolonnerne */
+    margin-left: 250px; /* rykker teksten ind på midten mens det stadig står læseligt fra venstre side */
+    margin-bottom: 30px;
+  }
+
+  /* rettelser til højre cv kolonne indhold i computersite */
+  .hoejre_cv {
+    line-height: 3; /* øger afstanden mellem tekst, så det fylder mere og passer med venstre_cv i højden af linjerne */
+  }
+
+  /* rettelser til galleri tekst i computersite */
+  .galleri_tekst {
+    font-size: 22px;
+    margin-left: 350px; /* centrerer teksten */
+    margin-right: 350px; /* centrerer teksten */
+    margin-top: 70px;
+    margin-bottom: 80px;
+    line-height: 1.5; /* justerer højden på afstanden mellem linjernes højde */
+  }
+
+  /* rettelser til galleri billeder i computersite */
+  .galleri {
+    grid-template-columns: repeat(4, 1fr); /* Fire kolonner på større skærme */
+    margin: 30px;
+  }
+
+  .portfolio h1 {
+    font-size: 100px;
+  }
+
+  .portfolio h2 {
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 30px;
+    line-height: 2.2;
+  }
+
+  .portfolio_illustration img {
+    width: 750px; /* Sætter billedets bredde til 800px */
+    padding-top: 30px; /* Tilføjer lidt afstand til toppen af billedet */
+    display: block; /* Sørger for, at margin fungerer korrekt */
+    margin: 0 auto; /* Centrerer billedet horisontalt */
+  }
+
+  .tema_01 {
+    margin-top: -290px;
+  }
+  /* Styling af hver tema-sektion med Flexbox for layout */
+  .tema_01,
+  .tema_02,
+  .tema_03,
+  .tema_04,
+  .tema_05_1,
+  .tema_05_2 {
+    display: flex; /* Anvender Flexbox for at oprette et to-kolonne layout */
+    justify-content: space-between; /* Fordeler plads mellem de to kolonner */
+    margin-bottom: 40px; /* Tilføjer plads nedenunder hver sektion */
+    padding: 20px; /* Tilføjer padding inden for hver sektion */
+  }
+
+  /* Styling af teksten i venstre kolonne */
+  .tema_01 .tekst,
+  .tema_02 .tekst,
+  .tema_03 .tekst,
+  .tema_04 .tekst,
+  .tema_05_1 .tekst,
+  .tema_05_2 .tekst {
+    flex: 1; /* Gør at tekstkolonnen optager lige meget plads som billedekolonnen */
+    margin-right: 20px; /* Tilføjer margin til højre for at adskille tekst og billede */
+  }
+
+  /* justering af overskrifter til mine gamle sites på portfolio-side */
+  .portfolio h4 {
+    font-size: 40px;
+    margin-top: 40px;
+  }
+
+  .portfolio h3 {
+    font-size: 30px;
+  }
+
+  /* justering af p tekst på portfolio-side */
+  .portfolio p {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    line-height: 2;
+  }
+
+  /* justering af link til Trelloboard  */
+  .trelloboard a {
+    color: black;
+    font-family: "Oooh Baby", serif;
+    font-size: 35px;
+  }
+
+  /* Styling af billedet i højre kolonne */
+  .tema_01 .billede,
+  .tema_02 .billede,
+  .tema_03 .billede,
+  .tema_04 .billede,
+  .tema_05_1 .billede,
+  .tema_05_2 .billede {
+    flex: 1; /* Gør at billedekolonnen optager lige meget plads som tekstkolonnen */
+    text-align: right; /* Justerer billederne til højre i deres kolonne */
+  }
+
+  /* Gør billederne responsive - har gjort dette opdelt, da jeg ikke synes at det fungerede som 'portfolio img', da det så ændrede på mit illustrationsbillede */
+  .tema_01 .billede img,
+  .tema_02 .billede img,
+  .tema_03 .billede img,
+  .tema_04 .billede img,
+  .tema_05_1 .billede img,
+  .tema_05_2 .billede img {
+    width: 90%; /* Gør billederne til 100% af deres containerbredde */
+    height: auto; /* Bevarer billedernes oprindelige aspect ratio */
+    margin-top: 70px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+  }
+}
