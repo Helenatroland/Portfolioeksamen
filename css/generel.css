@@ -10,7 +10,6 @@
 /* H1 + H3 + H4 font */
 .teko-normal {
   font-family: "Teko", serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
@@ -24,7 +23,6 @@
 /* P font */
 .dm-sans-normal {
   font-family: "DM Sans", serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
