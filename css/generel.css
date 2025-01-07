@@ -198,4 +198,66 @@ nav {
   width: auto; /* Bevarer proportionerne ved at justere bredden automatisk */
 }
 /* hover effekt på github logo - forstørres, når musen bliver kørt over */
-.github_image img:ho
+.github_image img:hover {
+  transform: scale(1.3);
+}
+
+/* Ændring af logoerne */
+.gridikoner img {
+  height: 30px; /* Sætter højden til 30px */
+  width: auto; /* Bevarer proportionerne ved at justere bredden automatisk */
+  margin-top: 10px;
+}
+
+/* hover effekt på logoerne - forstørres, når musen bliver kørt over */
+.gridikoner img:hover {
+  transform: scale(1.3);
+}
+
+/* TIL COMPUTER-VERSION */
+
+@media screen and (min-width: 768px) {
+  /* logo forstørres */
+  .logo {
+    width: 300px;
+    margin-top: -25px;
+  }
+  /* burgermenu fjernes */
+  .burger {
+    display: none;
+  }
+
+  /* normal menu vises */
+  .menu {
+    display: flex; /* Gør menuen synlig hele tiden */
+    flex-direction: row;
+    position: static;
+    background: none;
+    gap: 50px;
+    padding: 0;
+  }
+
+  /* ændring i footer, så der kommer to kolonner i stedet for en */
+  .footer {
+    flex-direction: row; /* Kolonnerne vises side om side på desktop */
+    justify-content: center; /* Centrerer de to sektioner */
+    text-align: left; /* Justerer tekst til venstre på desktop */
+  }
+
+  /* forstørrer */
+  .kontakt,
+  .sociale-medier {
+    margin-bottom: 0; /* Fjern margin mellem kolonnerne på desktop */
+    width: 50%; /* Giver begge sektioner plads til at være side om side */
+  }
+
+  /* gør SO-ME ikonerne større */
+  .gridikoner img {
+    height: 45px; /* forstørrer ikonerne */
+    margin-top: 20px;
+  }
+  /* gør github ikonet større */
+  .github_image img {
+    height: 100px; /* forstørrer ikonet */
+  }
+}
