@@ -33,7 +33,7 @@
   color: rgb(98, 96, 96);
   font-size: 20px;
   margin-top: 50px;
-  background-color: rgb(162, 154, 139);
+  background-color: rgb(205, 194, 172);
   padding: 3px 3px; /* Tilføjer afstand i baggrunden */
   border-radius: 70px; /* runder hjørnerne */
   margin: 70px;
@@ -57,7 +57,7 @@
   text-align: center;
   margin: 15px;
   font-size: 18px;
-  background-color: rgb(162, 154, 139);
+  background-color: rgb(205, 194, 172);
   padding: 3px 3px; /* Tilføjer afstand i baggrunden */
   border-radius: 70px; /* runder hjørnerne */
 }
@@ -205,14 +205,14 @@
 
 .portfolio h3 {
   text-decoration: none; /* Sørger for, at der ikke er nogen understrikning */
-  color: black;
+  color: rgb(98, 96, 96);
   font-size: 22px;
   text-align: center;
   margin-top: 15px;
   margin-bottom: 50px;
   margin-left: 70px;
   margin-right: 70px;
-  background-color: rgb(162, 154, 139);
+  background-color: rgb(205, 194, 172);
   border-radius: 70px; /* runder hjørnerne */
 }
 
