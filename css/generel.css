@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Fonte */
+/* FONTE */
 
 /* H1 + H3 + H4 font */
 .teko-normal {
@@ -26,11 +26,13 @@
   font-weight: 400;
   font-style: normal;
 }
+
 /* billeder bliver sat til max-width 100% */
 img {
   max-width: 100%;
 }
 
+/* FONTE TIL SPECIFIKKE SKRIFTE - GENERELT PÅ ALLE SIDER */
 h1 {
   font-family: "Teko", serif;
 }
@@ -59,7 +61,7 @@ p {
   justify-items: center;
 }
 
-/* alle links */
+/* ALLE LINKS */
 ul,
 ol {
   list-style: none;
@@ -72,7 +74,7 @@ body {
   background-color: rgb(244, 242, 229);
 }
 
-/* logo og link til index side */
+/* logo - og linker til index side */
 .logo {
   position: absolute;
   width: 200px;
@@ -80,12 +82,12 @@ body {
   margin-top: -10px;
 }
 
-/* hover effekt på logo og link til index side */
+/* hover effekt på logo - og linker til index side */
 .logo img:hover {
   transform: scale(1.2);
 }
 
-/* Menu */
+/* MENU */
 header {
   position: relative;
   top: 0;
@@ -119,6 +121,8 @@ nav {
 .menu li {
   margin-right: 20px;
 }
+
+/* OVERSKRIFT LINKS I MENUEN */
 .button-link {
   display: inline-block;
   color: black;
@@ -135,7 +139,7 @@ nav {
   transform: scale(1.3);
 }
 
-/* burgermenu */
+/* BURGERMENU */
 .burger {
   display: flex;
   flex-direction: column;
@@ -146,6 +150,7 @@ nav {
   background-color: rgb(186, 176, 156);
 }
 
+/* stregerne i burgermenu */
 .burger .line {
   height: 3px;
   width: 100%;
@@ -164,7 +169,7 @@ nav {
   display: flex;
 }
 
-/* footer */
+/* FOOTER */
 .footer {
   display: flex; /* Brug Flexbox for at opdele i kolonner */
   flex-direction: column; /* Kolonnerne stables vertikalt på mobile enheder */
@@ -176,7 +181,7 @@ nav {
   line-height: 1.8;
 }
 
-/* footer links tyling */
+/* footer links styling */
 .kontakt,
 .sociale-medier {
   margin-bottom: 20px; /* Afstand mellem de to sektioner */
@@ -209,19 +214,20 @@ nav {
   transform: scale(1.3);
 }
 
-/* Til computersite */
+/* TIL COMPUTER-VERSION */
+
 @media screen and (min-width: 768px) {
-  /* logo forstørres i computersite */
+  /* logo forstørres */
   .logo {
     width: 300px;
     margin-top: -25px;
   }
-  /* burgermenu fjernes i computersite */
+  /* burgermenu fjernes */
   .burger {
     display: none;
   }
 
-  /* normal menu i computerversion */
+  /* normal menu vises */
   .menu {
     display: flex; /* Gør menuen synlig hele tiden */
     flex-direction: row;
@@ -231,24 +237,26 @@ nav {
     padding: 0;
   }
 
-  /* ændring i footer, så der kommer to kolonner i computerversion */
+  /* ændring i footer, så der kommer to kolonner i stedet for en */
   .footer {
     flex-direction: row; /* Kolonnerne vises side om side på desktop */
     justify-content: center; /* Centrerer de to sektioner */
     text-align: left; /* Justerer tekst til venstre på desktop */
   }
 
+  /* forstørrer */
   .kontakt,
   .sociale-medier {
     margin-bottom: 0; /* Fjern margin mellem kolonnerne på desktop */
     width: 50%; /* Giver begge sektioner plads til at være side om side */
   }
 
+  /* gør SO-ME ikonerne større */
   .gridikoner img {
     height: 45px; /* forstørrer ikonerne */
     margin-top: 20px;
   }
-
+  /* gør github ikonet større */
   .github_image img {
     height: 100px; /* forstørrer ikonet */
   }
