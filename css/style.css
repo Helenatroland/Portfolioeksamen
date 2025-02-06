@@ -161,7 +161,7 @@
 .galleri {
   display: grid;
   gap: 10px; /* Afstand mellem billederne */
-  grid-template-columns: repeat(2, 1fr); /* To kolonner som standard (mobilversion) */
+  grid-template-columns: repeat(2, 1fr); /* To kolonner som standard. 1fr: Står for "1 fraction" (1 del). Hver kolonne får én lige stor del af den samlede tilgængelige plads. */
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: -30px; /* Gør afstanden fra de sidste billeder til footeren mindre */
@@ -392,7 +392,7 @@
 
   /* OM MIG SIDE - rettelser til galleri billeder */
   .galleri {
-    grid-template-columns: repeat(4, 1fr); /* Fire kolonner på større skærme */
+    grid-template-columns: repeat(4, 1fr); /* Fire kolonner på større skærme. 1fr: Står for "1 fraction" (1 del). Hver kolonne får én lige stor del af den samlede tilgængelige plads.*/
     margin: 30px;
   }
 
